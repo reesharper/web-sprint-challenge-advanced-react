@@ -12,6 +12,9 @@ export default class PlantList extends Component {
     plants: [],
   }
 
+  componentDidMount() {
+    this.fetchPlants();
+  }
 
   fetchPlants = () => {
     axios.get(`http://localhost:3333/plants`)
