@@ -17,7 +17,7 @@ const initialValue = {
 const CheckoutForm = (props) => {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   // const [values, setValues] = useState(initialValue);
-  const [values, handleChanges, resetForm] = useForm(initialValue);
+  const [values, handleChanges] = useForm(initialValue);
 
   // const handleChanges = (e) => {
   //   setValues({ ...values, [e.target.name]: e.target.value });
@@ -68,7 +68,7 @@ const CheckoutForm = (props) => {
           Zip:
           <input name="zip" value={values.zip} onChange={handleChanges} />
         </label>
-        <button onClick={resetForm}>Checkout</button>
+        <button>Checkout</button>
       </form>
 
       {showSuccessMessage && (
